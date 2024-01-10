@@ -1,0 +1,304 @@
+body {
+  margin: 0px;
+  overflow-x: hidden;
+}
+.holder {
+  max-width: 1500px;
+  /* background-color: #f3f3f3; */
+  background-color: white;
+}
+.sekcije {
+  max-width: 1500px;
+  width: 100%;
+}
+.logo {
+  border: 2px solid green;
+}
+.logo img {
+  width: 300px;
+}
+.zaglavlje {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+}
+.segmenti {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  color: #438a22;
+  font-size: 25px;
+  padding: 10px;
+  list-style: none;
+  color: white;
+}
+
+.segmenti li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+.segmenti li ul.dropdown li {
+  display: block;
+}
+.segmenti li ul.dropdown {
+  width: auto;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+.segmenti li:hover ul.dropdown {
+  display: block;
+}
+.dropdown li {
+  background-color: #52db21;
+  border-radius: 7px;
+  gap: 2px;
+  margin: 4px 0px;
+  width: 100px;
+  text-align: center;
+}
+.segment1 {
+  border-radius: 7px;
+  padding: 5px;
+}
+.segment1:hover {
+  color: white;
+  cursor: pointer;
+  background-color: #52db21;
+}
+.online {
+  background-color: #52db21;
+  color: white;
+}
+.home-image {
+  display: flex;
+  align-items: center;
+  max-width: 1500px;
+}
+.slika1 {
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  padding: 10px;
+  font-style: oblique;
+}
+.slider {
+  width: 500px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  overflow: hidden; /*koristi se kad nesto zelimo da sakrijemo ako se ppreliva moze i scrool umjesto hidden*/
+}
+.image-container {
+  width: 1500px;
+  background-color: white;
+  height: 400px;
+  clear: both; /*pomjera oboje ka sredini*/
+  position: relative; /*normalna pozicija a apsolutna je u odnosu na roditelja*/
+  -webkit-transition: left 1s; /*tranzicije podrzane od razlicitih pregledaca*/
+  -moz-transition: left 1s; /*Mozila?*/
+  -o-transition: left 1s; /*Opera*/
+  transition: left 1s;
+}
+.slide {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+/*Ovo nam omogucava pomjeranje po pikselima po x osi unutar diva za slika*/
+#slide-1:target ~ .image-container {
+  left: 0px;
+}
+#slide-2:target ~ .image-container {
+  left: -500px;
+}
+#slide-3:target ~ .image-container {
+  left: -1000px;
+}
+.buttons {
+  position: relative;
+  top: -20px;
+}
+.buttons a {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background-color: lightgreen;
+}
+.popularno {
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+}
+.slika-kartice {
+  border-radius: 15px;
+  transition: box-shadow 0.3s;
+}
+.slika-kartice:hover {
+  cursor: pointer;
+  box-shadow: 0 0 50px #ccc;
+  transform: scale(1);
+}
+.tekstic {
+  position: absolute;
+  color: black;
+  background-color: white;
+}
+.paragraf {
+  text-align: center;
+  font-size: 25px;
+}
+.inspiracija {
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.slika2 {
+  width: 550px;
+  height: 350px;
+}
+.opis-recepta p {
+  font-size: 25px;
+}
+.opis-recepta h2 {
+  text-align: center;
+}
+.opis-recepta button {
+  text-align: center;
+}
+.paragraf-kolacici {
+  font-style: italic;
+  font-size: 15px;
+  color: black;
+}
+.dugme1 {
+  border: 2px solid black;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  color: black;
+  font-size: 15px;
+}
+.dugme1:hover {
+  cursor: pointer;
+  background-color: gray;
+}
+.fixed-image {
+  background-attachment: fixed;
+  background-image: url("povrce.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ponuda-marketa {
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  /* border-bottom: 2px solid #52db21; */
+}
+.nove-kartice {
+  max-width: 300px;
+  text-align: center;
+}
+.nove-kartice p {
+  font-size: 22px;
+  color: black;
+}
+.nove-kartice h2 {
+  color: orange;
+}
+.lokacija {
+  text-align: center;
+}
+.footer1 {
+  background-color: #2f2f2f;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  color: white;
+  padding: 40px;
+}
+.lista li:hover {
+  cursor: pointer;
+  color: #d5d5d5;
+}
+.lista li {
+  list-style: none;
+  gap: 2px;
+  font-size: 17px;
+  font-style: oblique;
+}
+.email1 {
+  height: 35px;
+  width: 210px;
+}
+.email2 {
+  height: 40px;
+  width: 50px;
+  background-color: #444 !important;
+  border-color: #1e1e1e;
+  color: white;
+}
+.linija {
+  width: 1200px;
+  border: 4px solid #444;
+}
+.socijalne-mreze {
+  display: flex;
+  justify-content: space-between;
+}
+.nebitno p {
+  padding: 25px;
+  color: white;
+}
+.slika3 {
+  background-color: white;
+}
+.ikonice {
+  padding: 25px;
+}
+.ikonice a:hover {
+  cursor: pointer;
+  background-color: orange;
+}
+
+@media (min-width: 400px) {
+  p {
+    color: red;
+    font-size: 5px;
+  }
+  .zaglavlje {
+    max-width: 400px;
+    width: 100%;
+  }
+  .holder {
+    align-items: center;
+  }
+}
